@@ -34,10 +34,10 @@ classifier.fit(X_train, y_train) # закидываем в модель данн
 # Predicting the Test set results
 y_pred = classifier.predict(X_test) # предсказываем данные из X_test
 
-# Making the Confusion Matrix # зачем? узнаем насколько правильная модель?
+# Making the Confusion Matrix # узнаем насколько правильная модель
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred) # закиыдваем тестовые и предсказанные данные
-# данные [[65, 3], [8, 24]] 65+24= правильных предсказаний, 3+8= неправильных
+# данные [[65, 3], [8, 24]] 65+24= правильных предсказаний, 3+8= неправильных, в сумме будет 100 (y_test)
 
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap
